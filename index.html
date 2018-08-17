@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./lib/jquery-1.12.4.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="imgbox">
+
+    </div>
+</body>
+</html>
+<script type="text/html" id="imglist">
+
+    {{each result v i}}
+   
+      {{ v.img }}
+ 
+    {{/each}}
+
+</script>
+<script>
+    console.log($(".imgbox")[0]);
+    
+    $.ajax({
+        url:'http://mmb.ittun.com/api/getindexmenu',
+        type:"get",
+        success:function(res){
+            //  console.log(res.result.img);
+            
+            res.result.forEach(function(ele,index) {
+                var img = ele.img;
+                console.log(img);
+                
+                $(".imgbox").html(img);         
+            });
+
+
+
+
+            // var html = template("imglist",res);
+            // $(".imgbox").html(html);
+        }
+    })
+
+</script>
