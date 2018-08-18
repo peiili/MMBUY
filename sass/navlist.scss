@@ -1,0 +1,41 @@
+@import "./common.scss";
+.header {
+    display: flex;
+    color: white;
+    align-items: center;
+    padding-left: 10px;
+    position: fixed;
+    z-index: 100;
+    p {
+        text-align: center;
+        font-size: pr(20);
+        margin: 0;
+        color: white;
+        flex: 1;
+    }
+}
+
+.main {
+    padding: 60px 20px 0 20px;
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        div {            
+            flex: 50%;
+            padding-right:5px;           
+            .navlist {
+                border: 1px solid #ccc;                
+                margin-bottom: 5px;
+                background-color: #f4f4f4;
+                height: 40px;
+                padding: 0 10px;
+                display: flex;
+                align-items: center;
+                font-size: pr(14);
+                span {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
