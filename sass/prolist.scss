@@ -1,0 +1,105 @@
+@import "common.scss";
+.header {
+    position: fixed;
+    z-index: 100;
+}
+.main {
+    padding-top: 60px;
+    .search {
+        width: 100%;
+        padding: 0px 10px;
+        display: flex;
+        align-items:center;
+        input {
+            height: 30px;
+            background-color: #f1f1f1;
+            border: 0;
+            border-radius: 15px;
+            padding-left: 20px;
+            color: #a9a9a9;
+            flex: 1px;
+            margin-right:10px;
+        }
+        ::-webkit-input-placeholder {
+            font-size: 12px;
+        }
+        ::-ms-input-placeholder {
+            font-size: 12px;
+        }
+        ::-moz-input-placeholder {
+            font-size: 12px;
+        }
+        button {
+            flex-basis: 64px;
+            background:#ff841d;
+            border: 0;
+            border-radius: 15px;
+            margin-bottom:15px;
+            color:white;
+        }
+    }
+    .nav {
+        height: 35px;
+        font-size:pr(14);
+        background:linear-gradient(#fff,#f1f1f1);
+        padding: 0 10px;
+        display:flex;
+        align-items: center;
+        .crumbs {
+            flex: 1;
+            .mui-icon{
+                font-size:pr(14); 
+            }
+        }
+        .checkbtn {
+            height: 28px;
+            width: 60px;
+            margin:0;
+            justify-self: flex-end;
+            border-radius:5px;
+            display: inline-block;
+            box-shadow: 0 1px 1px #333;
+        }
+    }
+
+    // 商品列表样式
+    .prolist {
+        .mui-media {
+            // padding: 0 10px;
+            a {
+              .productImg {
+                height: 100px;
+                width: 100px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+              }
+              .abstract {
+                  padding-left:10px;
+                .productName {
+                    font-size:pr(14);
+                    color:#000;
+                    white-space:pre-wrap;
+                }
+                .productPrice{
+                    font-size:pr(16);
+                    color:red;
+                }
+                .productQuote {
+                    font-size:pr(12);
+                    color:#ccc;
+                }
+              }  
+            }
+        }
+    }
+
+    //分页样式
+    .paging {
+        .mui-pager {
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+}
