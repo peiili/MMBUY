@@ -106,37 +106,77 @@ input {
       color: gray; }
 
 .header {
-  display: flex;
-  color: white;
-  align-items: center;
-  padding-left: 10px;
   position: fixed;
   z-index: 100; }
-  .header p {
-    text-align: center;
-    font-size: 0.5333333333rem;
-    margin: 0;
-    color: white;
-    flex: 1; }
 
 .main {
-  padding: 60px 20px 0 20px; }
-  .main .content {
+  padding-top: 60px; }
+  .main .search {
+    width: 100%;
+    padding: 0px 10px;
     display: flex;
-    flex-wrap: wrap; }
-    .main .content div {
-      flex: 50%;
-      padding-right: 5px; }
-      .main .content div .navlist {
-        border: 1px solid #ccc;
-        margin-bottom: 5px;
-        background-color: #f4f4f4;
-        height: 40px;
-        padding: 0 10px;
-        display: flex;
-        align-items: center;
+    align-items: center; }
+    .main .search input {
+      height: 30px;
+      background-color: #f1f1f1;
+      border: 0;
+      border-radius: 15px;
+      padding-left: 20px;
+      color: #a9a9a9;
+      flex: 1px;
+      margin-right: 10px; }
+    .main .search ::-webkit-input-placeholder {
+      font-size: 12px; }
+    .main .search ::-ms-input-placeholder {
+      font-size: 12px; }
+    .main .search ::-moz-input-placeholder {
+      font-size: 12px; }
+    .main .search button {
+      flex-basis: 64px;
+      background: #ff841d;
+      border: 0;
+      border-radius: 15px;
+      margin-bottom: 15px;
+      color: white; }
+  .main .nav {
+    height: 35px;
+    font-size: 0.3733333333rem;
+    background: linear-gradient(#fff, #f1f1f1);
+    padding: 0 10px;
+    display: flex;
+    align-items: center; }
+    .main .nav .crumbs {
+      flex: 1; }
+      .main .nav .crumbs .mui-icon {
         font-size: 0.3733333333rem; }
-        .main .content div .navlist span {
-          margin-left: 10px; }
+    .main .nav .checkbtn {
+      height: 28px;
+      width: 60px;
+      margin: 0;
+      justify-self: flex-end;
+      border-radius: 5px;
+      display: inline-block;
+      box-shadow: 0 1px 1px #333; }
+  .main .prolist .mui-media a .productImg {
+    height: 100px;
+    width: 100px; }
+    .main .prolist .mui-media a .productImg img {
+      width: 100%;
+      height: 100%; }
+  .main .prolist .mui-media a .abstract {
+    padding-left: 10px; }
+    .main .prolist .mui-media a .abstract .productName {
+      font-size: 0.3733333333rem;
+      color: #000;
+      white-space: pre-wrap; }
+    .main .prolist .mui-media a .abstract .productPrice {
+      font-size: 0.4266666667rem;
+      color: red; }
+    .main .prolist .mui-media a .abstract .productQuote {
+      font-size: 0.32rem;
+      color: #ccc; }
+  .main .paging .mui-pager {
+    display: flex;
+    justify-content: space-around; }
 
-/*# sourceMappingURL=navlist.css.map */
+/*# sourceMappingURL=prolist.css.map */

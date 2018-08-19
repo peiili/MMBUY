@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 导入mul文件 -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <script src="./lib/jquery-1.12.4.js"></script>
+    <script src="./lib/02-zepto/zepto-master/src/zepto.js"></script>
+    <script src="./lib/mui/js/mui.min.js"></script>
+    <!-- 导入模板文件 -->
+    <script src="./lib/artTemplate/template-web.js"></script>
+
+    <!-- 导入自己的js文件 -->
+    <script src="./js/Piecetogether.js"></script>
+    <!-- 导入自己的css文件 -->
+    <!-- <link rel="stylesheet" href="./css/common.css"> -->
+    <link rel="stylesheet" href="./css/Piecetogether.css">
+
+</head>
+<body>
+    <!-- 头部开始 -->
+    <div class="header" id="logo">
+        <a class="icon" href="#"><span class="mui-icon mui-icon-arrowleft"></span></a>
+         <h3 class="heading">凑单品</h3>
+        <a class="download" href="#">
+            <span class="mui-icon mui-icon-download"></span>
+            <span>App下载</span>
+        </a>
+    </div>
+    <!-- 头部结束 -->
+<!-- 中间内容 -->
+    <div class="main">
+        <!-- 信息导航条模块开始 -->
+        <div class="information">
+            <select name="" id="shop">
+                <!-- 模板数据 -->
+            </select>
+            <select name="" id="region">
+                <!-- 模板数据 -->
+            </select>
+            <select name="" id="Price">
+                <option value="">全部价格</option>
+                <option value="">188.00</option>
+                <option value="">288.00</option>
+                <option value="">88</option>
+                <option value="">8</option>
+                <option value="">888</option>
+            </select>
+            <a class="search">
+                <span class="mui-icon mui-icon-list"></span>
+            </a>
+        </div>
+        <!-- 商品列表模块开始 -->
+        <div class="commoditylist">
+            <!-- 模板数据 -->
+        </div>
+    </div>
+   <!-- 底部 -->
+    <div class="footer">
+        <div class="brand">
+            <span>品牌排行</span>
+        </div>
+        <div class="toTop">
+            <a href="" class="login">登录</a>
+            <a href="" class="register">注册</a>
+            <a href="#logo" class="top"><img src="./images/top.jpg" alt=""> <span>返回顶部</span></a>
+        </div>
+
+        <div class="botm">
+            <p class="top">
+                <span class="red">手机APP下载</span>
+                <span class="black">慢慢买手机版</span>
+                <span class="glory">-- 掌上比价平台</span>
+            </p>
+            <p class="ht">m.manmanbuy.com</p>
+        </div>
+        
+
+    </div>
+</body>
+</html>
+<!-- 渲染店铺信息的模板 -->
+<script id="shoplist" type="text/html">
+    {{each result v i}}
+    <option value="{{v.shopId}}">{{v.shopName}}</option>
+    {{/each}}
+</script>
+<!-- 渲染地区信息模板 -->
+<script id="regionlist" type="text/html">
+    {{each result v i}}
+    <option value="{{v.areaId}}">{{v.areaName}}</option>
+    {{/each}}
+</script>
+<!-- 渲染商品列表信息的模板 -->
+<!-- 渲染地区信息模板 -->
+<script id="commodity" type="text/html">
+    {{each result v i}}
+    <div class="containerlist">
+        <div class="product">
+            <img src="{{v.productImg}}" alt="">
+            <p class="intro mui-ellipsis-1">{{v.productName}}</p>
+            <p class="price">
+                <span class="nowprice">{{v.productPrice}}</span>
+                <button class="mui-btn mui-btn-warning mui-pull-right">去凑单</button>
+            </p>
+        </div>
+    </div>
+    {{/each}}
+</script>
