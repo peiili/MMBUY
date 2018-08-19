@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="../lib/jquery-1.12.4.js"></script>
+    <script src="../lib/02-zepto/zepto-master/src/zepto.js"></script>
+    <link rel="stylesheet" href="../lib/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="../lib/mui/js/mui.min.js"></script>
+    <script src="../lib/artTemplate/template-web.js"></script>
+    <link rel="stylesheet" href="../css/categoryList.css">
+    <script src="../js/categoryList.js"></script>
+
+</head>
+
+<body>
+    <!-- 头部开始 -->
+    <div class="header">
+        <h1 class="logo" id="logo">
+            <a href="../index.html">
+                <img src="../images/header_logo.png" alt="">
+            </a>
+        </h1>
+
+        <div class="down">
+            <img src="../images/header_app.png" alt="">
+        </div>
+    </div>
+    <!-- 头部结束 -->
+
+    <div class="main">
+        <div class="search">
+            <div class="searchText">
+                <input type="text" placeholder="请输入您想比价的商品">
+            </div>
+            <div class="searchButton">
+                <input type="button" value="搜索">
+            </div>
+        </div>
+        <div class="theCategoryListContainer">
+            <div class="topNav">
+
+            </div>
+            <div class="productList">
+
+            </div>
+        </div>
+        <div class="pageList">
+            <div class="selectModal">
+                <button class="mui-pull-left prePageNumber">上一页</button>
+                <!-- <span class="currentPage">1</span> -->
+                <select name="mui-select" id="pageNum">
+
+                </select>
+                <button class="mui-pull-right nextPage">下一页</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="footer">
+        <div class="brand">
+            <span></span>
+        </div>
+
+        <div class="toTop">
+            <a href="" class="login">登录</a>
+            <a href="" class="register">注册</a>
+            <a href="#logo" class="top">
+                <img src="../images/top.jpg" alt="">
+                <span>返回顶部</span>
+            </a>
+        </div>
+
+        <div class="botm">
+            <p class="top">
+                <span class="red">手机APP下载</span>
+                <span class="black">慢慢买手机版</span>
+                <span class="glory">-- 掌上比价平台</span>
+            </p>
+            <p class="ht">m.manmanbuy.com</p>
+        </div>
+
+
+    </div>
+    <script type="text/html" id="topNavTem">
+        <a href="../index.html">首页</a>
+        <span class="mui-icon mui-icon-arrowright"></span>
+        <a href="./paritySearch.html">全部分类</a>
+        <span class="mui-icon mui-icon-arrowright"></span>
+        <a href="" id="bigCategoryName">{{result[0].category}}</a>
+        <span class="mui-icon mui-icon-arrowright"></span>
+
+        <button class="filter mui-pull-right">筛选</button>
+    </script>
+    <script type="text/html" id="productTemplate">
+        {{each result v i}}
+        <div class="theProduct" data-id="{{v.productId}}" data-brandname="{{v.brandName}}">
+            <div class="left">
+                {{#v.productImg}}
+            </div>
+            <div class="right">
+                <div class="title">{{ v.productName }}</div>
+                <div class="price">{{ v.productPrice }}</div>
+                <div class="bottom">
+                    <div class="quote">{{ v.productQuote }}</div>
+                    <div class="comment">{{ v.productCom }}</div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+
+    <script type="text/html" id="selectTemplate">
+        {{each pageNum v i}} 
+        {{if i == currentPage}}
+        <option id="option{{i}}" value="{{i+1}}" class="active pageNumberAction">{{i+1}}/{{maxPageNum}}▼</option>
+        {{else}}
+        <option id="option{{i}}" value="{{i+1}}" class="pageNumberAction">{{i+1}}/{{maxPageNum}}</option>
+        {{/if}} 
+        {{/each}}
+    </script>
+</body>
+
+</html>
