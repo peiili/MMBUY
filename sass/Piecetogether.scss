@@ -51,14 +51,20 @@ input {
 
 
 .main {
+    position: relative;
     .information{
         display: flex;
-        select{
-            margin: 0;
+        #shop{
+            flex-basis: 85px;
+        }
+        #region{
             flex: 1;
         }
+        #Price{
+            flex-basis: 85px;
+        }
         .search{
-            flex-basis: 45px;
+            flex-basis: 40px;
             height: 41px;
             display: flex;
             justify-content: center;

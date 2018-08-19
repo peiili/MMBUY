@@ -1,28 +1,5 @@
 $(function (){
-    // mui('.mui-scroll-wrapper').scroll({
-    //     deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
-    // });
-
-    // 导航条信息渲染
-    $.ajax({
-        url:"http://mmb.ittun.com/api/getgsshop",
-        type:"GET",
-        dataType:"json",
-        success:function (obj){
-           var html=template('shoplist',obj);
-           $('#shop').html(html);
-        }
-    });
-    //导航条地区信息渲染
-    $.ajax({
-        url:"http://mmb.ittun.com/api/getgsshoparea",
-        type:"GET",
-        dataType:"json",
-        success:function (obj){
-           var html=template('regionlist',obj);
-           $('#region').html(html);
-        }
-    });
+   
     //声明一个变量存储商铺id
     var shopId=0;
     var areaId=0;
@@ -44,14 +21,51 @@ $(function (){
             success:function (obj){
                var html=template('commodity',obj);
                $('.commoditylist').html(html);
+               //手动结束下拉刷新
+               mui(".main").pullRefresh().endPulldownToRefresh();
             }
         });
     }
-    //渲染页面
-    query(shopId,areaId);
+  
     //搜索按钮的点击事件
     $('.search').click(function (){
-        //
-        query(shopId,areaId);
-    })
+        console.log('1');
+        //手动触发下拉刷新
+        mui(".main").pullRefresh().pulldownLoading();
+    });
+
+
+    mui.init({
+        pullRefresh : {
+          container:".main",//下拉刷新容器标识，querySelector能定位的css选择器均可，比如：id、.class等
+          down : {
+            style:'circle',//必选，下拉刷新样式，目前支持原生5+ ‘circle’ 样式
+            auto: true,//可选,默认false.首次加载自动下拉刷新一次
+            callback :function (){
+                 // 导航条信息渲染
+                $.ajax({
+                    url:"http://mmb.ittun.com/api/getgsshop",
+                    type:"GET",
+                    dataType:"json",
+                    success:function (obj){
+                    var html=template('shoplist',obj);
+                    $('#shop').html(html);
+                    }
+                });
+                //导航条地区信息渲染
+                $.ajax({
+                    url:"http://mmb.ittun.com/api/getgsshoparea",
+                    type:"GET",
+                    dataType:"json",
+                    success:function (obj){
+                    var html=template('regionlist',obj);
+                    $('#region').html(html);
+                    }
+                });
+                query(shopId,areaId);
+                
+            }
+          }
+        }
+      });
 })
