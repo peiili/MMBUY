@@ -133,4 +133,45 @@ input {
   color: gray;
 }
 
-/*# sourceMappingURL=common.css.map */
+.header {
+  display: flex;
+  color: white;
+  align-items: center;
+  padding-left: 10px;
+  position: fixed;
+  z-index: 100;
+}
+.header p {
+  text-align: center;
+  font-size: 0.5333333333rem;
+  margin: 0;
+  color: white;
+  flex: 1;
+}
+
+.main {
+  padding: 60px 20px 0 20px;
+}
+.main .content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.main .content div {
+  flex: 50%;
+  padding-right: 5px;
+}
+.main .content div .navlist {
+  border: 1px solid #ccc;
+  margin-bottom: 5px;
+  background-color: #f4f4f4;
+  height: 40px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  font-size: 0.3733333333rem;
+}
+.main .content div .navlist span {
+  margin-left: 10px;
+}
+
+/*# sourceMappingURL=sitenav.css.map */

@@ -1,0 +1,387 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+}
+
+@media screen and (min-width: 600px) {
+  html, body {
+    font-size: 16px;
+  }
+}
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+.header {
+  width: 100%;
+  height: 52px;
+  background-color: #ff841d;
+  display: flex;
+}
+.header .logo {
+  display: flex;
+  height: 100%;
+  flex: 1;
+  align-items: center;
+  padding-left: 15px;
+}
+.header .logo img {
+  height: 28px;
+  width: 189px;
+}
+.header .down {
+  display: flex;
+  flex-basis: 55px;
+  height: 100%;
+  align-items: center;
+  padding-right: 15px;
+}
+.header .down img {
+  height: 38px;
+  width: 100%;
+}
+
+.main {
+  background: #fff;
+}
+
+.footer {
+  background-color: #efefef;
+}
+.footer .brand {
+  width: 100%;
+  height: 35px;
+  background-color: #ff841d;
+  color: #fff;
+  font-size: 16px;
+  line-height: 35px;
+  padding-left: 10px;
+  margin-bottom: 25px;
+}
+.footer .toTop {
+  display: flex;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+}
+.footer .toTop a {
+  font-size: 14px;
+  color: black;
+  height: 32px;
+}
+.footer .toTop .login {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #c4c4c4;
+}
+.footer .toTop .register {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #c4c4c4;
+}
+.footer .toTop .top {
+  display: flex;
+  flex-basis: 150px;
+  justify-content: center;
+  align-items: center;
+}
+.footer .toTop .top span {
+  padding-left: 5px;
+}
+.footer .toTop .top img {
+  width: 15px;
+  height: 15px;
+}
+.footer .botm {
+  height: 63px;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 18px;
+}
+.footer .botm .red {
+  color: red;
+}
+.footer .botm .black {
+  color: black;
+}
+.footer .botm .glory {
+  color: gray;
+}
+.footer .botm .ht {
+  color: gray;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  position: relative;
+}
+body .arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  position: fixed;
+  bottom: 36px;
+  right: 8px;
+  z-index: 100;
+  display: block;
+  background: url("../images/up.png");
+}
+
+.container {
+  background-color: #fff;
+  position: relative;
+  color: #000;
+  margin: 0 auto;
+  max-width: 600px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: #000;
+}
+.container .header {
+  background-color: #f4483e;
+  flex-basis: 40px;
+  position: fixed;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .header > a {
+  flex-basis: 16px;
+  height: 24px;
+  background: url("../images/leftzzz.png") no-repeat;
+  margin-left: 10px;
+}
+.container .header .down {
+  display: flex;
+}
+.container .header .down a {
+  height: 100%;
+}
+.container .header p {
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.container .header .down {
+  margin-right: -15px;
+}
+.container .header .down img {
+  height: 34px;
+  width: 34px;
+}
+.container .main {
+  flex: 1;
+  margin-top: 52px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.container .main .wrap1 {
+  flex-basis: 36px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.container .main .wrap1 .mui-scroll {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.container .main .wrap1 .mui-scroll .tablist {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-basis: 36px;
+  border-bottom: 2px solid #f7f7f7;
+  padding-left: 10px;
+  padding-right: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.container .main .wrap1 .mui-scroll .tablist p {
+  height: 30px;
+  font-size: 14px;
+  color: #000;
+  flex: 16.66666%;
+  margin-left: 13px;
+  margin-right: 13px;
+  margin-top: 6px;
+  margin-bottom: 0;
+}
+.container .main .wrap1 .mui-scroll .tablist p.active {
+  border-bottom: 2px solid #f00;
+  color: #f00;
+  transition: all 0.5s;
+}
+.container .main .wrap1 .mui-scroll .tablist p:first-of-type {
+  margin-left: 0;
+}
+.container .main .wrap1 .mui-scroll .tablist p:last-of-type {
+  margin-right: 0;
+}
+.container .main .wrap2 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.container .main .wrap2 .mui-scroll {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.container .main .wrap2 .mui-scroll .productlist {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .main .wrap2 .mui-scroll .productlist .product {
+  margin-bottom: 6px;
+  flex: 100%;
+  display: flex;
+}
+.container .main .wrap2 .mui-scroll .productlist .product .left {
+  flex-basis: 130px;
+}
+.container .main .wrap2 .mui-scroll .productlist .product .left img {
+  width: 100%;
+}
+.container .main .wrap2 .mui-scroll .productlist .product .right {
+  margin-left: 6px;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+.container .main .wrap2 .mui-scroll .productlist .product .right .name {
+  font-size: 14px;
+  color: #000;
+}
+.container .main .wrap2 .mui-scroll .productlist .product .right .price {
+  font-size: 20px;
+  color: #f00;
+}
+.container .main .wrap2 .mui-scroll .productlist .product .right .price em {
+  color: #f00;
+  font-size: 12px;
+}
+.container .main .wrap2 .mui-scroll .productlist .product .right .price del {
+  font-size: 12px;
+  color: #ccc;
+  text-decoration: line-through;
+  margin-left: 10px;
+}
+.container .main .wrap2 .mui-scroll .productlist .product .right .percent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .main .wrap2 .mui-scroll .productlist .product .right .percent .bar {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+.container .main .wrap2 .mui-scroll .productlist .product .right .percent .bar .goquan {
+  flex-basis: 100px;
+  height: 18px;
+  border: 1px solid #f00;
+  border-radius: 10px;
+  background-color: #ffb7b7;
+  overflow: hidden;
+}
+.container .main .wrap2 .mui-scroll .productlist .product .right .percent .bar i {
+  flex-basis: 100px;
+  height: 18px;
+  border: 1px solid #f00;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  margin-left: -100px;
+  margin-bottom: 0;
+  overflow: hidden;
+  position: relative;
+}
+.container .main .wrap2 .mui-scroll .productlist .product .right .percent .bar i span {
+  position: absolute;
+  left: 40px;
+  top: -2px;
+}
+.container .main .wrap2 .mui-scroll .productlist .product .right .percent .bar i em {
+  background-color: #fc353a;
+  display: inline-block;
+  height: 18px;
+}
+.container .main .wrap2 .mui-scroll .productlist .product .right .percent .bar b {
+  flex-basis: 100px;
+  color: #f00;
+  margin-left: 40px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.container .main .wrap2 .mui-scroll .productlist .product .right .bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.container .main .wrap2 .mui-scroll .productlist .product .right .bottom > a {
+  border: 1px dashed #f00;
+  color: #f00;
+  line-height: 33px;
+}
+.container .main .wrap2 .mui-scroll .productlist .product .right .bottom button {
+  background-color: #ff5e5d;
+}
+.container .main .wrap2 .mui-scroll .productlist .product .right .bottom button a {
+  color: #fff;
+}
+.container .main .wrap2 .mui-scroll .productlist .footer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container .main .wrap2 .mui-scroll .productlist .footer .toTop .top {
+  display: flex;
+  align-items: center;
+}
+.container .main .wrap2 .mui-scroll .productlist .footer .toTop .top span {
+  margin-top: 3px;
+}
+.container .main .wrap2 .mui-scroll .productlist .footer .botm {
+  height: 50px;
+}
+.container .main .wrap2 .mui-scroll .productlist .footer .botm .top {
+  margin-bottom: 0;
+}
+
+/*# sourceMappingURL=baicaijia.css.map */
