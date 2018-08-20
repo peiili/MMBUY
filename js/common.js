@@ -6,19 +6,50 @@ function back(){
 }
 
 function totop(){
-    mui('.wrap2').scroll().scrollTo(0,0,500);//500ºÁÃë¹ö¶¯µ½¶¥
+    mui('.wrap2').scroll().scrollTo(0,0,500);//500ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 }
 
 
 
 $(function() {
     setTimeout(function () {
-        //ÈÃÇøÓò¹ö¶¯ÉúĞ§
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ§
         mui('.mui-scroll-wrapper').scroll();
 
-        //ÈÃÍ¼Æ¬ÂÖ²¥ÉúĞ§
+        //ï¿½ï¿½Í¼Æ¬ï¿½Ö²ï¿½ï¿½ï¿½Ğ§
         mui('.mui-slider').slider({
-            interval:5000//×Ô¶¯ÂÖ²¥ÖÜÆÚ£¬ÈôÎª0Ôò²»×Ô¶¯²¥·Å£¬Ä¬ÈÏÎª0£»
+            interval:5000//ï¿½Ô¶ï¿½ï¿½Ö²ï¿½ï¿½ï¿½ï¿½Ú£ï¿½ï¿½ï¿½Îª0ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½Å£ï¿½Ä¬ï¿½ï¿½Îª0ï¿½ï¿½
         });
     },5000)
 });
+
+//1é¢åŒ…å±‘å¯¼èˆª
+function crumbs(cateid) {
+    $.ajax({
+        url: "http://mmb.ittun.com/api/getcategorybyid",
+        type: "get",
+        data: {
+            "categoryid": cateid, 
+        },
+        success: function (data) {
+            var htmlcrumbs = template("crumbs",data);
+            $('.crumbs').html(htmlcrumbs);
+        }
+    });   
+
+}
+//2 ä»urlä¸­è·å–æœ‰æ•ˆä¿¡æ¯çš„å·¥å…·,ç›´æ¥è°ƒç”¨,è¿”å›å€¼ä¸ºä¸€ä¸ªå¯¹è±¡;
+
+function urlTool(){
+    let url = location.href;
+    //å°†urlåˆ†å‰²;
+    let array = url.split("?").pop().split("&");        
+    var data ={};
+    array.forEach(function(ele,index){
+        //å°†è·å¾—åˆ°çš„æ¯ä¸ªå…ƒç´ ç”¨ "="è¿›è¡Œåˆ†å‰²
+      let dataarr = ele.split("=");
+     //å°†æ•°ç»„çš„æ¯ä¸€ä¸ªå…ƒç´ éå†åˆ°å¯¹è±¡ä¸­;
+      data[dataarr[0]]=dataarr[1]; 
+    });
+   return data;  
+};

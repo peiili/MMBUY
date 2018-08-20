@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+
+.main .mui-scroll {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  width: 375px;
+}
+.main .mui-scroll h4 {
+  height: 50px;
+  line-height: 50px;
+  margin: 0;
+}
+.main .mui-scroll .money {
+  font-size: 14px;
+  margin-top: -5px;
+  padding: 0 0 10px 0;
+  color: #ff871b;
+}
+.main .mui-scroll p {
+  display: flex;
+  margin-bottom: 10px;
+}
+.main .mui-scroll p span {
+  font-size: 14px;
+  color: #aaaa;
+  padding-right: 5px;
+}
+.main .mui-scroll .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+}
+.main .mui-scroll .text p {
+  font-size: normal;
+  color: #5a5a5a;
+  flex: 1;
+  margin-bottom: 3px;
+}
+.main .mui-scroll .up {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  width: 375px;
+  margin-bottom: 15px;
+}
+.main .mui-scroll .up .later {
+  display: flex;
+  justify-content: left;
+  color: #5a5a5a;
+  font-size: 13px;
+}
+.main .mui-scroll .up img {
+  width: 100%;
+  width: 226px;
+}
+.main .mui-scroll .city {
+  width: 100%;
+  text-align: center;
+}
+.main .mui-scroll .buy {
+  height: 44px;
+  width: 100%;
+  padding: 5px 35px 0 10px;
+}
+.main .mui-scroll .buy p {
+  line-height: 20px;
+  display: block;
+  background-color: #ff9400;
+  text-align: center;
+  margin: 0;
+  color: #ffff;
+  border-radius: 3px;
+}
+.main .mui-scroll .pc {
+  height: 120px;
+  width: 100%;
+  padding-right: 25px;
+}
+.main .mui-scroll .pc img {
+  width: 100%;
+}
+.main .mui-scroll .tit {
+  margin-top: 20px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.main .mui-scroll .reply .form {
+  padding-right: 30px;
+}
+.main .mui-scroll .reply .form #ctl00_ContentBody_txt_nr {
+  margin: 0;
+  padding: 0;
+  height: 76px;
+}
+.main .mui-scroll .reply .form .ctrl {
+  height: 35px;
+  width: 100%;
+  position: relative;
+  background-color: #fbfbfb;
+  margin-top: -9px;
+  border: 1px solid #ccc;
+}
+.main .mui-scroll .reply .form .ctrl .tjdp {
+  position: absolute;
+  right: 0;
+}
+.main .mui-scroll #newcomment {
+  margin: 10px 0 0 0;
+}
+
+/*# sourceMappingURL=discount.css.map */

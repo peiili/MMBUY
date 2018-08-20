@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./css/chinaProduct.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/detailPage.css">
+
+     <script src="./lib/jquery-3.1.1.min.js"></script>
+    <script src="./lib/02-zepto/zepto-master/src/zepto.js"></script>
+    <script src="./lib/mui/js/mui.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/detailPage.js"></script>
+
+    
+
+</head>
+<body>
+    <!-- 头部开始 -->
+    <div class="header" id="logo">
+            <a href="index.html">
+               <span class="mui-icon mui-icon-arrowleft"></span>
+            </a>
+        <h2>国内折扣</h2>
+
+    <a href="" class="down">
+        <img src="./images/header_app.png" alt="">
+    </a>
+    </div>
+    <!-- 头部结束 -->
+
+
+<div class="main">
+    <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <!--这里放置真实显示的DOM内容-->
+           
+           
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    <!-- 底部开始 -->
+    <div class="footer">
+       
+        <div class="toTop">
+            <a href="" class="login">登录</a>
+            <a href="" class="register">注册</a>
+            <a href="#logo" class="top"><img src="./images/top.jpg" alt=""> <span>返回顶部</span></a>
+        </div>
+
+        <div class="botm">
+            <p class="top">
+                <span class="red">手机APP下载</span>
+                <span class="black">慢慢买手机版</span>
+                <span class="glory">-- 掌上比价平台</span>
+            </p>
+            <p class="ht">m.manmanbuy.com</p>
+        </div>
+            
+
+
+    </div>
+</body>
+</html>
+<script type="text/html" id="temple">
+    {{each result v i}}
+    <h4>{{v.productName}}</h4>
+    <p>
+        <span>{{v.productFrom}}</span>
+        <span>{{v.productTime}}</span>
+        <span>{{v.productTips}}</span>
+    </p>
+    <div class="text">
+        <p>{{v.productInfo}}</p>
+        {{#v.productImgSm}}
+    </div>
+    <div class="up">
+         <div class="later">{{v.productInfo1}}</div>
+        {{#v.productImgLg}}
+    </div>
+    <div class="city">
+            {{#v.productCity}}
+    </div>
+    <div class="buy">
+        <p>前往购买</p>
+    </div>
+    <div class="pc">
+        <img src="./images/mmbweixin2.png" alt="">
+    </div>
+    {{#v.productComment}}   
+
+{{/each}}
+
+
+
+
+
+</script>

@@ -1,0 +1,96 @@
+html, body {
+  height: 100%;
+  font-size: 12px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+body .header {
+  display: flex;
+  flex-basis: 52px;
+  justify-content: space-between;
+}
+body .header a {
+  height: 100%;
+  color: #ffff;
+}
+body .header a span {
+  display: block;
+  font-size: 35px;
+  height: 100%;
+  line-height: 52px;
+}
+body .header h2 {
+  padding: 0;
+  margin: 0;
+  line-height: 52px;
+  color: #ffffff;
+  font-weight: normal;
+  font-size: 22px;
+}
+body .header .down {
+  height: 100%;
+}
+body .header .down img {
+  width: 100%;
+}
+body .main {
+  flex: 1;
+  display: flex;
+  position: relative;
+}
+body .main .mui-scroll-wrapper .mui-scroll {
+  display: flex;
+  flex-wrap: wrap;
+}
+body .main .mui-scroll-wrapper .mui-scroll .box {
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  height: 264px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 5px;
+}
+body .main .mui-scroll-wrapper .mui-scroll .box .jump {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .main .mui-scroll-wrapper .mui-scroll .box .jump img {
+  width: 142px;
+  padding: 10px 0;
+}
+body .main .mui-scroll-wrapper .mui-scroll .box .jump span {
+  color: #333333;
+  font-size: 16px;
+  font-weight: bold;
+}
+body .main .mui-scroll-wrapper .mui-scroll .box .jump p {
+  width: 100%;
+  display: flex;
+}
+body .main .mui-scroll-wrapper .mui-scroll .box .jump p .font {
+  color: #ff841d;
+  padding: 0;
+  font-size: 13px;
+}
+body .main .mui-scroll-wrapper .mui-scroll .box a span {
+  color: #a1a1a1;
+  font-size: 15px;
+}
+body .footer {
+  flex-basis: 35px;
+}
+
+/*# sourceMappingURL=chinaProduct.css.map */

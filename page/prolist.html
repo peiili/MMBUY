@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>商品列表</title>
     <script>
         document.querySelector("html").style.fontSize = screen.width / 10 + "px";
     </script>
@@ -13,6 +13,7 @@
     <script src="../lib/02-zepto/zepto-master/src/zepto.js"></script>
     <script src="../lib/02-zepto/zepto-master/src/ajax.js"></script>
     <script src="../lib/02-zepto/zepto-master/src/event.js"></script>
+    <script src="../js/common.js"></script>
     <!-- 引入mui插件 -->
     <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
     <script src="../lib/mui/js/mui.min.js"></script>
@@ -36,7 +37,6 @@
         </div>
     </div>
     <!-- 头部结束 -->
-
     <div class="main">
         <div class="search">
             <input type="text" placeholder="请输入您想比价的商品">
@@ -52,7 +52,7 @@
                     <span class="mui-icon mui-icon-forward"></span>
                     <a href="../index.html">全部分类</a>
                     <span class="mui-icon mui-icon-forward"></span>
-                    <a href="../index.html">{{v.category}}</a>             
+                    <a href="../index.html">{{v.category}}</a>
                     <span class="mui-icon mui-icon-forward"></span>
                     {{/each}}
                 </script>
@@ -68,11 +68,11 @@
             <!-- 商品模板 -->
 
         </ul>
-          <!-- 分页按钮 -->
+        <!-- 分页按钮 -->
         <div class="mui-content-padded paging">
             <ul class="mui-pager">
                 <li class="mui-previous">
-                    <a href="#">
+                    <a>
                         上一页
                     </a>
                 </li>
@@ -84,18 +84,14 @@
                     </select>
                 </li>
                 <li class="mui-next">
-                    <a href="#">
+                    <a>
                         下一页
                     </a>
                 </li>
             </ul>
         </div>
-        
-    </div>
 
-   
     </div>
-
     <div class="footer">
         <div class="toTop">
             <a href="" class="login">登录</a>
@@ -122,20 +118,20 @@
 
 </html>
 
-<!-- 插入模板 -->
+<!-- 插入商品列表模板 -->
 <script type="text/html" id="prolist">
     {{each result v i}}
-    <li class="mui-table-view-cell mui-media" data-id="{{v.productId}}">
-            <a href="">
-                <div class="mui-pull-left productImg">
-                   {{#v.productImg}}
-                </div>               
-                <div class="mui-media-body abstract">
-                    <p class="productName">{{v.productName}}</p>
-                    <p class='mui-ellipsis productPrice'>{{v.productPrice}}</p>
-                    <p class="evaluate productQuote">{{v.productQuote}} {{v.productCom}} </p>
-                </div>
-            </a>
-        </li>
+    <li class="mui-table-view-cell mui-media">
+        <a href="./getproduct.html?productId={{v.productId}}">
+            <div class="mui-pull-left productImg">
+                {{#v.productImg}}
+            </div>
+            <div class="mui-media-body abstract">
+                <p class="productName">{{v.productName}}</p>
+                <p class='mui-ellipsis productPrice'>{{v.productPrice}}</p>
+                <p class="evaluate productQuote">{{v.productQuote}} {{v.productCom}} </p>
+            </div>
+        </a>
+    </li>
     {{/each}}
 </script>

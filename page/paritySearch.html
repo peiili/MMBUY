@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="../lib/font-awesome-4.7.0/css/font-awesome.min.css">
     <script src="../lib/mui/js/mui.min.js"></script>
     <script src="../lib/artTemplate/template-web.js"></script>
-
     <link rel="stylesheet" href="../css/paritySearch.css">
     <script src="../js/paritySearch.js"></script>
 
@@ -81,7 +80,7 @@
             <ul class="categoryTitle">
                 {{each result v i}}
                 <li class="productTitle" data-id="{{v.titleId}}">
-                    <a href="###">{{v.title}}</a>
+                    <a>{{v.title}}</a>
                     <span class="mui-icon mui-icon-arrowdown mui-pull-right"></span>
                 </li>
                 <li class="subproductTitle"></li>
@@ -92,9 +91,9 @@
     <script type="text/html" id="fineClassification">
         <ul>
             {{each result v i}}
-            <li>
-                <p class="categoryPro" data-id="{{v.titleId}}">
-                    <a href="###">{{v.category}}</a>
+            <li class="categoryId">
+                <p class="categoryPro" data-id="{{v.categoryId}}">
+                    <a>{{v.category}}</a>
                 </p>
             </li>
             {{/each}}
