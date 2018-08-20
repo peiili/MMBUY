@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+}
+
+.main .mui-scroll {
+  padding-left: 10px;
+  width: 375px;
+}
+.main .mui-scroll h4 {
+  height: 50px;
+  line-height: 50px;
+  margin: 0;
+}
+.main .mui-scroll p {
+  display: flex;
+  margin-bottom: 10px;
+}
+.main .mui-scroll p span {
+  font-size: 14px;
+  color: #aaaa;
+  padding-right: 5px;
+}
+.main .mui-scroll .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .mui-scroll .text p {
+  font-size: normal;
+  color: #5a5a5a;
+  flex: 1;
+  margin-bottom: 3px;
+}
+.main .mui-scroll .text img {
+  width: 140px;
+  padding: 0 25px;
+}
+.main .mui-scroll .up {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  width: 375px;
+  margin-bottom: 15px;
+}
+.main .mui-scroll .up .later {
+  display: flex;
+  justify-content: left;
+  color: #5a5a5a;
+  font-size: 13px;
+}
+.main .mui-scroll .up img {
+  width: 100%;
+  padding: 0 50px 0 30px;
+}
+.main .mui-scroll .city {
+  width: 100%;
+  text-align: center;
+}
+.main .mui-scroll .city #disstorck li a {
+  border-bottom: 1px  dashed #ccc;
+  line-height: 15px;
+}
+.main .mui-scroll .city #disstorck li a span {
+  margin-right: 15px;
+}
+.main .mui-scroll .city #disstorck li a span strong {
+  color: #ff9400;
+  margin-left: 15px;
+}
+.main .mui-scroll .buy {
+  height: 44px;
+  width: 100%;
+  padding: 5px 35px 0 10px;
+}
+.main .mui-scroll .buy p {
+  line-height: 20px;
+  display: block;
+  background-color: #ff9400;
+  text-align: center;
+  margin: 0;
+  color: #ffff;
+  border-radius: 3px;
+}
+.main .mui-scroll .pc {
+  height: 120px;
+  width: 100%;
+  padding-right: 25px;
+}
+.main .mui-scroll .pc img {
+  width: 100%;
+}
+.main .mui-scroll .ui-border-t {
+  margin-top: 30px;
+  font-size: 13px;
+  width: 100%;
+}
+.main .mui-scroll .ui-border-t .tit {
+  color: red;
+}
+.main .mui-scroll .ui-border-t .reply {
+  width: 100%;
+}
+.main .mui-scroll .ui-border-t .reply .form {
+  position: relative;
+  width: 100%;
+  padding: 5px 35px 0 10px;
+}
+.main .mui-scroll .ui-border-t .reply .form #ctl00_ContentBody_txt_nr {
+  height: 86px;
+  padding: 0;
+  margin: 0;
+}
+.main .mui-scroll .ui-border-t .reply .form .ctrl {
+  width: 100%;
+  height: 31px;
+  border: 1px solid #ccc;
+  margin-top: -7px;
+  position: relative;
+  background-color: #fbfbfb;
+}
+.main .mui-scroll .ui-border-t .reply .form .ctrl .tjdp {
+  background-color: #ff9400;
+  border-radius: 0;
+  border: 0;
+  position: absolute;
+  right: 0;
+}
+.main .mui-scroll .ui-border-t #newcomment {
+  margin-top: 10px;
+}
+.main .mui-scroll .ui-border-t .list {
+  width: 100%;
+}
+.main .mui-scroll .ui-border-t .list ul {
+  width: 100%;
+}
+.main .mui-scroll .ui-border-t .list ul li {
+  display: flex;
+  flex-wrap: wrap;
+  height: 40px;
+  width: 100%;
+}
+.main .mui-scroll .ui-border-t .list ul li .userimg {
+  flex-basis: 40px;
+  padding-right: 5px;
+}
+.main .mui-scroll .ui-border-t .list ul li .userimg img {
+  width: 40px;
+  border-radius: 20px;
+}
+.main .mui-scroll .ui-border-t .list ul li .con {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.main .mui-scroll .ui-border-t .list ul li .con .clearfix {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+.main .mui-scroll .ui-border-t .list ul li .con .content {
+  flex: 1;
+}
+
+/*# sourceMappingURL=detailPage.css.map */

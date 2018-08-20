@@ -1,0 +1,185 @@
+*{
+    box-sizing: border-box;
+}
+.main{
+    .mui-scroll{
+        padding-left: 10px;
+        width: 375px;
+        h4{
+            height: 50px;
+           line-height: 50px;
+           margin: 0;
+        }
+        p{
+            display: flex;
+            margin-bottom: 10px;
+            span{
+                font-size: 14px;
+                color: #aaaa;
+                padding-right: 5px;
+            }
+        }
+        .text{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            p{
+                font-size: normal;
+                color: #5a5a5a;
+                flex: 1;
+                margin-bottom: 3px;
+ 
+            }
+            img{
+                width: 140px;
+                padding:0 25px;     
+            }
+        }
+        .up{
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: center;
+            width: 375px;
+            margin-bottom: 15px;
+            .later{
+                display: flex;
+                justify-content: left;
+                color: #5a5a5a;
+                font-size: 13px;
+               
+             }
+             img{
+               width: 100%;
+               padding: 0 50px 0 30px;
+             }
+        }
+    
+        .city{
+            width: 100%;
+            text-align: center;
+            #disstorck{
+                li{
+                    a{
+                        border-bottom: 1px  dashed #ccc;
+                        line-height: 15px;
+                        span{
+                            margin-right: 15px;
+                            strong{
+                                color: #ff9400;
+                                margin-left: 15px
+                            }
+                        }
+                    }
+                }
+            }
+         
+        }
+        .buy{
+            height: 44px;
+            width: 100%;
+            padding: 5px 35px 0 10px;
+
+         
+            p{
+                // width: 100%;
+                line-height: 20px;
+                display: block;
+                background-color: #ff9400;
+                text-align: center;
+                margin: 0;
+                color: #ffff;
+                border-radius: 3px;
+            }
+        }
+        .pc{
+            height: 120px;
+            width: 100%;
+            padding-right: 25px;
+             img{
+                 width: 100%;
+
+             }
+        }
+        .ui-border-t{
+            margin-top: 30px;
+            font-size: 13px;
+            width: 100%;
+            .tit{
+                color:red;
+            }
+            .reply{
+                width: 100%;
+
+               .form{
+                   position: relative;
+                   width: 100%;
+                   padding: 5px 35px 0 10px;
+                   #ctl00_ContentBody_txt_nr{
+                        height: 86px;
+                        padding: 0;
+                        margin: 0;
+                  }
+                  .ctrl{
+                      width: 100%;
+                      height: 31px;
+                      border: 1px solid #ccc;
+                      margin-top: -7px;
+                      position: relative;
+                      background-color: #fbfbfb;
+                    .tjdp{
+                        background-color:#ff9400;
+                        border-radius: 0;
+                        border: 0;
+                        position: absolute;
+                        right: 0;
+                      }
+                  }
+            } 
+         }
+         #newcomment{
+             margin-top: 10px;
+         }
+         .list{
+             width: 100%;   
+             ul{
+                 width: 100%;
+
+                 li{
+                     display: flex;
+                     flex-wrap: wrap;
+                     height: 40px;
+                     width: 100%;
+                    .userimg{
+                        flex-basis: 40px;
+                        padding-right: 5px;
+                        img{
+                            width: 40px;
+                            border-radius: 20px;
+                        }
+                    }
+                  .con{
+                    // width: 100%;
+                    flex: 1;
+                    display: flex;
+                   flex-direction: column;
+                    .clearfix{
+                        width: 100%;
+                        height: 50%;
+                        display: flex;
+                        flex: 1;
+                        justify-content: space-between;
+                      
+                    }
+                    .content{
+                      flex:1;
+                    }
+                  }
+                 }
+             }
+         }
+           
+        }
+    }
+}
