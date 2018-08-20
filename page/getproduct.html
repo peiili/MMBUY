@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品详情页</title>
+    <script>
+        document.querySelector("html").style.fontSize = screen.width / 10 + "px";
+    </script>
+    <!-- 引入zepto插件 -->
+    <script src="../lib/02-zepto/zepto-master/src/zepto.js"></script>
+    <script src="../lib/02-zepto/zepto-master/src/ajax.js"></script>
+    <script src="../lib/02-zepto/zepto-master/src/event.js"></script>
+    <!-- 引入mui插件 -->
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <script src="../lib/mui/js/mui.min.js"></script>
+    <script src="../js/common.js"></script>
+    <!-- 引入模板引擎 -->
+    <script src="../lib/artTemplate/template-web.js"></script>
+    <link rel="stylesheet" href="../css/getproduct.css">
+    <script src="../js/getproduct.js"></script>
+</head>
+
+<body>
+    <!-- 头部开始 -->
+    <div class="header">
+        <h1 class="logo" id="logo">
+            <a href="index.html">
+                <img src="../images/header_logo.png" alt="">
+            </a>
+        </h1>
+
+        <div class="down">
+            <img src="../images/header_app.png" alt="">
+        </div>
+    </div>
+    <!-- 头部结束 -->
+    <div class="main">
+        <div class="search">
+            <input type="text" placeholder="请输入您想比价的商品" id="searchq">
+            <button id="search">搜索</button>
+        </div>
+        <!-- 商品导航 -->
+        <div class="nav">
+            <div class="crumbs">
+                <!-- <script type="text/html" id="crumbs">
+                    {{each result v i}} -->
+                <a href="../index.html">首页</a>
+                <span class="mui-icon mui-icon-forward"></span>
+                <a href="../index.html">全部分类</a>
+                <span class="mui-icon mui-icon-forward"></span>
+                <a href="../index.html">{{v.category}}</a>
+                <span class="mui-icon mui-icon-forward"></span>
+                <!-- {{/each}}
+                </script> -->
+            </div>
+
+            <button type="button" class="mui-btn mui-pull-right mui-btn-outlined checkbtn">筛选</button>
+
+        </div>
+        <!-- 商品详情 -->
+        <div class="contnet">
+            <script id="setproduct" type="text/html">
+                {{each result v i}}
+                <!-- 商品详情 -->
+                <div class="details">
+                    <div class="title">
+                        {{v.productName}}
+                    </div>
+                    {{#v.productImg}}
+                    <div class="collect">
+                        收藏
+                    </div>
+                </div>
+                <!-- table栏 -->
+                <div class="table">
+                    <a href="">
+                        <span>比价购买</span>
+                    </a>
+                    <a href="">
+                        <span>产品参数</span>
+                    </a>
+                    <a href="">
+                        <span>评价（2322）</span>
+                    </a>
+                </div>
+
+                <!-- 京东商城 -->
+               <div class="jd">
+                {{#v.bjShop}}
+                </div>
+                <!-- 说明 -->
+                <div class="explain mui-ellipsis-2">
+                        *实际价格以各网站列出的实时售价为准,我们提供的价格可能有数小时至数日的延迟.
+                </div>
+                {{/each}}
+            </script>
+        
+        </div>
+        <!-- 网友评价 -->
+        <div class="evaluate">
+            <div class="title">
+                网友评价
+            </div>
+            <!-- 插入对应的模板 -->
+            <div class="info">
+                <span>
+                    b***r
+                </span>
+                2016/10/1
+            </div>
+            <p class="form">购买自：京东商城</p>
+            <div class="content">
+                *实际价格以各网站列出的实时售价为准,我们提供的价格可能有数小时至数日的延迟.
+               </div>
+            <div class="moreevaluate">
+                <button class="mui-btn">查看更多评价</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="toTop">
+            <a href="" class="login">登录</a>
+            <a href="" class="register">注册</a>
+            <a href="#search" class="top">
+                <img src="../images/top.jpg" alt="">
+
+                <span>返回顶部</span>
+            </a>
+        </div>
+
+        <div class="botm">
+            <p class="top">
+                <span class="red">手机APP下载</span>
+                <span class="black">慢慢买手机版</span>
+                <span class="glory">-- 掌上比价平台</span>
+            </p>
+            <p class="ht">m.manmanbuy.com</p>
+        </div>
+    </div>
+</body>
+
+</html>
+<!-- 面包屑导航模板 -->
+<script type="text/html" id="crumbs">
+    {{each result v i}}
+    <a href="../index.html">首页</a>
+    <span class="mui-icon mui-icon-forward"></span>
+    <a href="../index.html">全部分类</a>
+    <span class="mui-icon mui-icon-forward"></span>
+    <a href="../index.html">{{v.category}}</a>
+    <span class="mui-icon mui-icon-forward"></span>
+    {{/each}}
+</script>
+
+<!-- 网友评价模板 -->
+<script type="text/html" id="comment">
+   
+    <div class="title">
+            网友评价
+        </div>
+        {{each result v i}}
+        <div class="info" data-comid="{{v.comid}} data-productId = {{v.productId}}">
+            <span>
+               {{v.comName}}
+            </span>
+            {{v.comTime}}
+        </div>
+        <p class="form">{{v.conFrome}}</p>
+        <div class="content">
+           {{v.comContent}}
+        </div>
+        {{/each}}
+        <div class="moreevaluate">
+            <button class="mui-btn">查看更多评价</button>
+        </div>
+</script>

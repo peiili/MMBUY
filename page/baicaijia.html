@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+
+        <script src="../lib/jquery-1.12.4.js"></script>
+
+        <link rel="stylesheet" href="../lib/mui/css/mui.min.css"/>
+        <script src="../lib/mui/js/mui.min.js"></script>
+
+        <script src="../lib/artTemplate/template-web.js"></script>
+        <link rel="stylesheet" href="../lib/font-awesome-4.7.0/css/font-awesome.min.css"/>
+
+        <link rel="stylesheet" href="../sass/baicaijia.css"/>
+        <script src="../js/common.js"></script>
+        <script src="../js/baicaijia.js"></script>
+
+    </head>
+    <body>
+        <div class="container">
+
+            <!-- 头部部分-->
+            <div class="header">
+                <a href="javascript:back();"></a>
+
+                <p class="title">白菜价-淘宝内部券</p>
+
+                <div class="down">
+                    <a href="http://m.manmanbuy.com/app.html?type=headword&amp;value=wap" onclick="trackEvent('header下载');" title="手机app下载">
+                        <img src="../images/header_app.png" alt="手机app下载">'
+                    </a>
+                </div>
+            </div>
+            <!-- 主体部分-->
+            <div class="main">
+                <div class="mui-scroll-wrapper wrap1   mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+                    <div class="mui-scroll">
+                        <div class="tablist">
+                            <p class="active">全部</p>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="mui-scroll-wrapper wrap2">
+                    <div class="mui-scroll">
+                        <div class="productlist">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+
+        <script type="text/html" id="tablist">
+            {{each result v i}}
+            <p class="{{if i==0}}active{{/if}}" data-id="{{v.titleId}}">{{v.title}}</p>
+            {{/each}}
+        </script>
+
+        <script type="text/html" id="productlist">
+            {{each result v i}}
+            <div class="product">
+                <div class="left">
+                    {{#v.productImg}}
+                </div>
+
+                <div class="right">
+                    <p class="name">
+                        {{#v.productName}}
+                    </p>
+
+                    <p class="price">
+                        {{#v.productPrice}}
+                    </p>
+
+                    <div class="percent">
+                        {{#v.productCouponRemain}}
+                    </div>
+
+                    <p class="bottom">
+                        {{#v.productCoupon}}
+                        <button>{{#v.productHref}}</button>
+                    </p>
+                </div>
+            </div>
+            {{/each}}
+
+            <div class="footer">
+                <div class="toTop">
+                    <a href="" class="login">登录</a>
+                    <a href="" class="register">注册</a>
+                    <a href="javascript:totop();" class="top">
+                        <img src="../images/top.jpg" alt=""/>
+                        <span>返回顶部</span>
+                    </a>
+                </div>
+
+                <div class="botm">
+                    <p class="top">
+                        <span class="red">手机APP下载</span>
+                        <span class="black">慢慢买手机版</span>
+                        <span class="glory">--掌上比价平台</span>
+                    </p>
+
+                    <p class="ht">m.manmanbuy.com</p>
+                </div>
+
+
+            </div>
+        </script>
+
+        <div class="arrow">
+            <!--<a>-->
+                <!--<i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i>-->
+            <!--</a>-->
+        </div>
+    </body>
+</html>

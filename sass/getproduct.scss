@@ -1,0 +1,178 @@
+@import "common2.scss";
+.header {
+    position: fixed;
+    z-index: 100;
+}
+
+.main {
+    padding-top: 60px;
+    .search {
+        width: 100%;
+        padding: 0px 10px;
+        display: flex;
+        align-items: center;
+        input {
+            height: 30px;
+            background-color: #f1f1f1;
+            border: 0;
+            border-radius: 15px;
+            padding-left: 20px;
+            color: #a9a9a9;
+            flex: 1px;
+            margin-right: 10px;
+        }
+        ::-webkit-input-placeholder {
+            font-size: 12px;
+        }
+        ::-ms-input-placeholder {
+            font-size: 12px;
+        }
+        ::-moz-input-placeholder {
+            font-size: 12px;
+        }
+        button {
+            flex-basis: 64px;
+            background: #ff841d;
+            border: 0;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            color: white;
+        }
+    }
+    .nav {
+        height: 35px;
+        font-size: pr(14);
+        background: linear-gradient(#fff, #f1f1f1);
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        .crumbs {
+            flex: 1;
+            .mui-icon {
+                font-size: pr(14);
+            }
+        }
+        .checkbtn {
+            height: 28px;
+            width: 60px;
+            margin: 0;
+            justify-self: flex-end;
+            border-radius: 5px;
+            display: inline-block;
+            box-shadow: 0 1px 1px #333;
+        }
+    }
+    .contnet {
+        //商品详情部分
+        .details {
+            position: relative;
+            height: pr(248);
+            padding-top: 17px;
+            .title {
+                font-size: pr(16);
+                color: black;
+                padding: 0 20px;
+                text-align: center;
+            }
+            img {
+                width: pr(167);
+                margin: 0 auto;
+            }
+            .collect {
+                position: absolute;
+                background-color: #8dc700;
+                width: 40px;
+                height: 40px;
+                color: white;
+                right: 20px;
+                bottom: 20px;
+                font-size: 12px;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 40px;
+            }
+        }
+        .table {
+            display: flex;
+            a {
+                flex: 1;
+                border-top: 1px solid #c14d00;
+                border-bottom: 1px solid #c14d00;
+                font-size: pr(14);
+                text-align: center;
+                height: 32px;
+                line-height: 32px;
+                color: white;
+                background-color: #ffc72d;
+                &:nth-child(1) {
+                    background-color: #ff9a17;
+                }
+                &:nth-child(2) {
+                    border-left: 1px solid #c14d00;
+                    border-right: 1px solid #c14d00;
+                }
+            }
+        } //京东商城
+        .jd {
+            height: 44px;
+            border-bottom: 1px solid #bbb;
+            padding: 0 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .left {
+                display: flex;
+                span {
+                    margin-left: 5px;
+                }
+            }
+        } //eaplain说明
+        .explain {
+            height: 57px;
+            border-bottom: 5px solid #7a7a7a;
+            color: #888;
+            padding: 10px;
+        }
+    }
+
+    //网友评价
+    .evaluate{
+        .title {
+            height: 34px;
+            background-color: #dbdbdb;
+            text-align: center;
+            line-height: 34px;
+            font-size:pr(14);
+        }
+        .info {
+            margin-top:15px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 10px;
+            font-size:pr(14);
+            color:#666;
+        }
+        .form {
+            padding-right:10px;
+            text-align: right;
+        }
+        .content {
+            margin-top:10px;
+            padding: 0 10px;
+            border-bottom:1px solid #ccc;
+            font-size: 14px;
+        }
+        .moreevaluate {
+            height: 31px;
+            padding: 0 10px;
+            margin:15px 0 24px;
+            .mui-btn {
+                height: 100%;
+                width: 100%;
+                background: linear-gradient(to bottom,#efefef, #cccccc);
+            }
+            
+        }
+    }
+
+}
