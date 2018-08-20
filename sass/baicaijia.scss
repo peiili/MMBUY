@@ -14,7 +14,7 @@ body{
     //font-size: 42px;
     position: fixed;
     bottom: 36px;
-    right: 8px;
+    right: 12px;
     z-index: 100;
     display: block;
     background: url("../images/up.png");
@@ -30,13 +30,12 @@ body{
   background-color: #fff;
   position: relative;
   color: #000;
-  margin: 0 auto;
+  //margin: 0 auto;
   max-width: 600px;
   height: 100%;
   display: flex;
   flex-direction: column;
   font-size: 14px;
-  color: #000;
 
   .header{
     background-color: #f4483e;
@@ -66,7 +65,9 @@ body{
       margin-bottom: 0;
       font-size: 18px;
       font-weight: bold;
-      color: #ffffff;
+      color:rgba(255,255,255,0.6);
+      background:-webkit-linear-gradient(-30deg,rgba(255,255,255,0) 10px,rgba(255,255,255,1) 21px,rgba(255,255,255,1) 24px,rgba(255,255,255,0) 30px) -30px 0 no-repeat;
+      -webkit-background-clip:text;
     }
 
     .down{
@@ -125,7 +126,7 @@ body{
             &.active{
               border-bottom: 2px solid #f00;
               color: #f00;
-              transition: all 0.5s;
+              transition: all 1s;
             }
 
             &:first-of-type{
@@ -319,10 +320,6 @@ body{
       }
     }
   }
-
-
-
-
 
 }
 

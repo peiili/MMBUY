@@ -18,12 +18,24 @@
         <script src="../js/common.js"></script>
         <script src="../js/baicaijia.js"></script>
 
+        <link rel="stylesheet" href="../css/baicaijia_animation.css"/>
+        <!-- 按钮动画-->
+        <link rel="stylesheet" href="../css/normalize.css"/>
+        <link rel='stylesheet prefetch' href='http://www.jq22.com/jquery/font-awesome.4.6.0.css'>
+        <link rel="stylesheet prefetch" href="../css/animate1.min.css"/>
+        <link rel="stylesheet" href="../css/animate2.min.css"/>
+        <link rel="stylesheet" href="../css/style1.css"/>
+
+
     </head>
     <body>
         <div class="container">
 
             <!-- 头部部分-->
             <div class="header">
+                <!-- 特效-->
+                <div id="petalbox"></div>
+
                 <a href="javascript:back();"></a>
 
                 <p class="title">白菜价-淘宝内部券</p>
@@ -54,11 +66,6 @@
                     </div>
                 </div>
             </div>
-
-
-
-
-
 
         </div>
 
@@ -120,10 +127,85 @@
             </div>
         </script>
 
-        <div class="arrow">
-            <!--<a>-->
-                <!--<i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i>-->
-            <!--</a>-->
+        <!--小箭头 -->
+        <div class="arrow"></div>
+
+        <!-- 图标-->
+        <div id='ss_menu'>
+            <div>
+                <i class="fa fa-qq"></i>
+            </div>
+            <div>
+                <i class="fa fa-weibo"></i>
+            </div>
+            <div>
+                <i class="fa fa-weixin"></i>
+            </div>
+            <div>
+                <i class="fa fa-renren"></i>
+            </div>
+            <div class='menu'>
+                <div class='share' id='ss_toggle' data-rot='180'>
+                    <div class='circle'></div>
+                    <div class='bar'></div>
+                </div>
+            </div>
         </div>
+
+        <!-- 下滑动画-->
+        <script src="../js/baicaijia_animation.js"></script>
+
+        <!-- 按钮动画-->
+        <script src="http://www.jq22.com/jquery/2.1.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="../lib/jquery-1.12.4.js"><\/script>')</script>
+        <script>
+            $(document).ready(function (ev) {
+                var toggle = $('#ss_toggle');
+                var menu = $('#ss_menu');
+                var rot;
+                $('#ss_toggle').on('click', function (ev) {
+                    rot = parseInt($(this).data('rot')) - 180;
+                    menu.css('transform', 'rotate(' + rot + 'deg)');
+                    menu.css('webkitTransform', 'rotate(' + rot + 'deg)');
+                    if (rot / 180 % 2 == 0) {
+                        toggle.parent().addClass('ss_active');
+                        toggle.addClass('close');
+                    } else {
+                        toggle.parent().removeClass('ss_active');
+                        toggle.removeClass('close');
+                    }
+                    $(this).data('rot', rot);
+                });
+                menu.on('transitionend webkitTransitionEnd oTransitionEnd', function () {
+                    if (rot / 180 % 2 == 0) {
+                        $('#ss_menu div i').addClass('ss_animate');
+                    } else {
+                        $('#ss_menu div i').removeClass('ss_animate');
+                    }
+                });
+            });
+
+
+            var ph=document.getElementsByClassName("title")[0];
+            var otime=null;
+            var num=-30;
+            function tomove(){
+
+                otime=setInterval(function (){
+                    num+=1;
+                    if(num==120)
+                    {
+                        num=-30;
+                        clearInterval(otime);
+                    }
+                    ph.style.backgroundPosition=num+"px 0px";
+
+                },80)
+            }
+            tomove();
+            setInterval(function(){
+                tomove();
+            },3000);
+        </script>
     </body>
 </html>

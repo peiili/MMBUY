@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background: white; }
+
+@media screen and (min-width: 600px) {
+  html, body {
+    font-size: 16px; } }
+img {
+  display: block; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+ul, ol {
+  list-style: none; }
+
+input {
+  outline: none;
+  border: none; }
+
+.header {
+  width: 100%;
+  height: 52px;
+  background-color: #ff841d;
+  display: flex; }
+  .header .logo {
+    display: flex;
+    height: 100%;
+    flex: 1;
+    align-items: center;
+    padding-left: 15px; }
+    .header .logo img {
+      height: 28px;
+      width: 189px; }
+  .header .down {
+    display: flex;
+    flex-basis: 55px;
+    height: 100%;
+    align-items: center;
+    padding-right: 15px; }
+    .header .down img {
+      height: 38px;
+      width: 100%; }
+
+.main {
+  background: #fff; }
+
+.footer {
+  background-color: #efefef; }
+  .footer .brand {
+    width: 100%;
+    height: 35px;
+    background-color: #ff841d;
+    color: #fff;
+    font-size: 16px;
+    line-height: 35px;
+    padding-left: 10px;
+    margin-bottom: 25px; }
+  .footer .toTop {
+    display: flex;
+    border-top: 1px solid #c4c4c4;
+    border-bottom: 1px solid #c4c4c4; }
+    .footer .toTop a {
+      font-size: 14px;
+      color: black;
+      height: 32px; }
+    .footer .toTop .login {
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+      border-right: 1px solid #c4c4c4; }
+    .footer .toTop .register {
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+      border-right: 1px solid #c4c4c4; }
+    .footer .toTop .top {
+      display: flex;
+      flex-basis: 150px;
+      justify-content: center;
+      align-items: center; }
+      .footer .toTop .top span {
+        padding-left: 5px; }
+      .footer .toTop .top img {
+        width: 15px;
+        height: 15px; }
+  .footer .botm {
+    height: 63px;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 18px; }
+    .footer .botm .red {
+      color: red; }
+    .footer .botm .black {
+      color: black; }
+    .footer .botm .glory {
+      color: gray; }
+    .footer .botm .ht {
+      color: gray; }
+
+.header {
+  position: fixed;
+  z-index: 100; }
+
+.main {
+  padding-top: 60px; }
+  .main .search {
+    width: 100%;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center; }
+    .main .search input {
+      height: 30px;
+      background-color: #f1f1f1;
+      border: 0;
+      border-radius: 15px;
+      padding-left: 20px;
+      color: #a9a9a9;
+      flex: 1px;
+      margin-right: 10px; }
+    .main .search ::-webkit-input-placeholder {
+      font-size: 12px; }
+    .main .search ::-ms-input-placeholder {
+      font-size: 12px; }
+    .main .search ::-moz-input-placeholder {
+      font-size: 12px; }
+    .main .search button {
+      flex-basis: 64px;
+      background: #ff841d;
+      border: 0;
+      border-radius: 15px;
+      margin-bottom: 15px;
+      color: white; }
+  .main .nav {
+    height: 35px;
+    font-size: 0.3733333333rem;
+    background: linear-gradient(#fff, #f1f1f1);
+    padding: 0 10px;
+    display: flex;
+    align-items: center; }
+    .main .nav .crumbs {
+      flex: 1; }
+      .main .nav .crumbs .mui-icon {
+        font-size: 0.3733333333rem; }
+    .main .nav .checkbtn {
+      height: 28px;
+      width: 60px;
+      margin: 0;
+      justify-self: flex-end;
+      border-radius: 5px;
+      display: inline-block;
+      box-shadow: 0 1px 1px #333; }
+  .main .prolist .mui-media a .productImg {
+    height: 100px;
+    width: 100px; }
+    .main .prolist .mui-media a .productImg img {
+      width: 100%;
+      height: 100%; }
+  .main .prolist .mui-media a .abstract {
+    padding-left: 10px; }
+    .main .prolist .mui-media a .abstract .productName {
+      font-size: 0.3733333333rem;
+      color: #000;
+      white-space: pre-wrap; }
+    .main .prolist .mui-media a .abstract .productPrice {
+      font-size: 0.4266666667rem;
+      color: red; }
+    .main .prolist .mui-media a .abstract .productQuote {
+      font-size: 0.32rem;
+      color: #ccc; }
+  .main .paging .mui-pager {
+    display: flex;
+    justify-content: space-around; }
+
+/*# sourceMappingURL=prolist.css.map */
